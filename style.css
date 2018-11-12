@@ -1,0 +1,75 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3)), url('./img/bg.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+@media (max-width: 480px), (max-width: 640px) and (orientation: landscape) {
+  body {
+    padding: 20px;
+    font-size: 12px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin: 0;
+  padding: 35px;
+}
+
+@media (max-width: 480px), (max-width: 640px) and (orientation: landscape) {
+  .wrapper {
+    width: 100%;
+    /* border-radius: 0; */
+    padding: 20px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 10px 5px;
+  border-block-start: 2px solid orange;
+  border-block-end: 2px solid white;
+}
+
+th[data-sorting-order=ascending], th[data-sorting-order=descending] {
+  font-weight: bold;
+}
+
+th[data-sorting-order=ascending]:before {
+  content: '\2193\0020';
+}
+
+th[data-sorting-order=descending]:before {
+  content: '\2191\0020';
+}
+
+td {
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
